@@ -1,0 +1,227 @@
+/* ==========================
+  CSS Tutorial Main Styles
+=========================== */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+hr {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+pre {
+    background-color: #eee;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+code {
+    color: #c7254e;
+    font-family: monospace;
+}
+
+/* ==========================
+  TEXT & FONT
+=========================== */
+
+.font-example {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+}
+
+.text-transform {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.text-decoration {
+    text-decoration: underline;
+}
+
+/* ==========================
+  BOX MODEL
+=========================== */
+
+.box-model-demo {
+    width: 150px;
+    height: 100px;
+    padding: 10px;
+    border: 2px solid #333;
+    margin: 20px;
+    background-color: #dcdcdc;
+}
+
+/* ==========================
+  COLORS & BACKGROUND
+=========================== */
+
+.color-demo {
+    color: white;
+    background-color: #007BFF;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ==========================
+  DISPLAY & POSITION
+=========================== */
+
+.block-demo {
+    display: block;
+    background-color: #f39c12;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.inline-demo {
+    display: inline-block;
+    background-color: #8e44ad;
+    color: white;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+.relative-demo {
+    position: relative;
+    width: 300px;
+    height: 100px;
+    background-color: #ecf0f1;
+    margin-bottom: 20px;
+    border: 1px solid #bdc3c7;
+}
+
+.absolute-demo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px;
+}
+
+/* ==========================
+  FLEXBOX & GRID
+=========================== */
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #bdc3c7;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.flex-container div {
+    background-color: #2ecc71;
+    padding: 10px;
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    background-color: #ecf0f1;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.grid-container div {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ==========================
+  PSEUDO-CLASSES & NTH-CHILD
+=========================== */
+
+.hover-btn {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.hover-btn:hover {
+    background-color: #28a745;
+}
+
+.nth-child-demo li {
+    list-style: none;
+    padding: 5px;
+}
+
+.nth-child-demo li:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+/* ==========================
+  ANIMATIONS & KEYFRAMES
+=========================== */
+
+@keyframes move {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(100px); }
+    100% { transform: translateX(0); }
+}
+
+.animation-demo {
+    width: 100px;
+    height: 100px;
+    background-color: #ff5733;
+    animation: move 3s infinite;
+    margin-bottom: 20px;
+}
+
+/* ==========================
+  CSS VARIABLES
+=========================== */
+
+:root {
+    --main-color: #007BFF;
+}
+
+.variable-demo {
+    color: var(--main-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ==========================
+  MEDIA QUERIES
+=========================== */
+
+.responsive-demo {
+    width: 200px;
+    height: 100px;
+    background-color: #2c3e50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .responsive-demo {
+        background-color: #f39c12;
+        color: #000;
+    }
+}

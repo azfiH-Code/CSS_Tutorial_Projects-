@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Complete Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>CSS Complete Tutorial</h1>
+<p>This page covers all important CSS properties, their types, and live examples.</p>
+<hr>
+
+<!-- KEY CSS TYPES -->
+<h2>CSS Property Types</h2>
+<p>CSS properties can be grouped into types:</p>
+<ul>
+    <li><b>Text & Font</b> → font-family, font-size, font-weight, text-align, text-decoration, text-transform</li>
+    <li><b>Box Model</b> → margin, padding, border, width, height</li>
+    <li><b>Background & Color</b> → background-color, background-image, color, opacity</li>
+    <li><b>Display & Visibility</b> → display, visibility, overflow</li>
+    <li><b>Positioning</b> → position, top, left, z-index</li>
+    <li><b>Flex & Grid Layout</b> → display:flex/grid, justify-content, align-items, grid-template-columns</li>
+    <li><b>Transitions & Animations</b> → transition, transform, @keyframes, animation</li>
+    <li><b>Pseudo-classes & Pseudo-elements</b> → :hover, :focus, :nth-child(), ::before, ::after</li>
+    <li><b>CSS Variables</b> → --variable-name</li>
+</ul>
+
+<hr>
+
+<!-- FONT -->
+<h2>Text & Font Properties</h2>
+<p>Property type: <b>Text / Font</b></p>
+<p class="font-example">Font-family example</p>
+<pre><code>
+.font-example {
+    font-family: 'Arial', sans-serif;
+}
+</code></pre>
+
+<p class="text-transform">Text-transform example (uppercase)</p>
+<pre><code>
+.text-transform {
+    text-transform: uppercase;
+}
+</code></pre>
+
+<p class="text-decoration">Text-decoration example (underline)</p>
+<pre><code>
+.text-decoration {
+    text-decoration: underline;
+}
+</code></pre>
+
+<hr>
+
+<!-- BOX MODEL -->
+<h2>Box Model</h2>
+<p>Property type: <b>Box Model</b></p>
+<div class="box-model-demo">Box model example</div>
+<pre><code>
+.box-model-demo {
+    width: 150px;
+    height: 100px;
+    padding: 10px;
+    border: 2px solid #333;
+    margin: 20px;
+}
+</code></pre>
+
+<hr>
+
+<!-- COLORS -->
+<h2>Colors & Background</h2>
+<p>Property type: <b>Color / Background</b></p>
+<div class="color-demo">Color & background demo</div>
+<pre><code>
+.color-demo {
+    color: white;
+    background-color: #007BFF;
+}
+</code></pre>
+
+<hr>
+
+<!-- DISPLAY & POSITION -->
+<h2>Display & Position</h2>
+<p>Property type: <b>Layout</b></p>
+<div class="block-demo">Block Example</div>
+<div class="inline-demo">Inline Example</div>
+<div class="inline-demo">Inline Example 2</div>
+
+<div class="relative-demo">
+Relative container
+    <div class="absolute-demo">Absolute inside relative</div>
+</div>
+
+<pre><code>
+.block-demo { display: block; }
+.inline-demo { display: inline-block; }
+.relative-demo { position: relative; }
+.absolute-demo { position: absolute; top: 0; left: 0; }
+</code></pre>
+
+<hr>
+
+<!-- FLEX & GRID -->
+<h2>Flexbox Example</h2>
+<p>Property type: <b>Layout</b></p>
+<div class="flex-container">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+</div>
+<pre><code>
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+</code></pre>
+
+<h2>Grid Example</h2>
+<div class="grid-container">
+    <div>A</div><div>B</div><div>C</div><div>D</div>
+</div>
+<pre><code>
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+</code></pre>
+
+<hr>
+
+<!-- PSEUDO-CLASSES -->
+<h2>Pseudo-classes</h2>
+<p>Hover over the button to see effect (type: <b>Pseudo-class</b>)</p>
+<button class="hover-btn">Hover Me</button>
+<pre><code>
+.hover-btn:hover {
+    background-color: #28a745;
+    color: white;
+}
+</code></pre>
+
+<p>:nth-child Example</p>
+<ul class="nth-child-demo">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+<pre><code>
+.nth-child-demo li:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+</code></pre>
+
+<hr>
+
+<!-- KEYFRAMES -->
+<h2>CSS Animation (@keyframes)</h2>
+<div class="animation-demo">Animated Box</div>
+<pre><code>
+@keyframes move {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(100px); }
+    100% { transform: translateX(0); }
+}
+.animation-demo {
+    width: 100px;
+    height: 100px;
+    background-color: #ff5733;
+    animation: move 3s infinite;
+}
+</code></pre>
+
+<hr>
+
+<!-- VARIABLES -->
+<h2>CSS Variables</h2>
+<div class="variable-demo">Variable Example</div>
+<pre><code>
+:root {
+    --main-color: #007BFF;
+}
+.variable-demo {
+    color: var(--main-color);
+}
+</code></pre>
+
+<hr>
+
+<!-- MEDIA QUERIES -->
+<h2>Media Query Example</h2>
+<div class="responsive-demo">Resize Screen</div>
+<pre><code>
+@media (max-width: 600px) {
+    .responsive-demo { background-color: #f39c12; }
+}
+</code></pre>
+
+<hr>
+<p><b>End of Tutorial: CSS Properties, Pseudo-classes, Keyframes, Variables, Flex/Grid, and Media Queries</b></p>
+
+</body>
+</html>
